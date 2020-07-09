@@ -1,0 +1,20 @@
+---
+title: "Swirl"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+install.packages("swirl")
+packageVersion("swirl")
+library(swirl)
+install_from_swirl("R Programming")
+
+swirl()
+
+
+```
+

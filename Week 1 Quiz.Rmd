@@ -1,0 +1,37 @@
+---
+title: "Quiz Week 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+df_quiz_1 = read.csv("./Data/week_1_quiz.csv")
+
+names(df_quiz_1) #nombres de columnas
+
+df_quiz_1[1:2,] #primeras dos filas
+
+nrow(df_quiz_1) #observaciones
+
+tail(df_quiz_1, 2) #ultimas dos filas
+
+df_quiz_1[47, "Ozone"] # Resultado de Ozone en fila 47
+
+table(is.na(df_quiz_1[,"Ozone"])) #Cantidad de NA en Ozone
+
+mean(df_quiz_1$Ozone, na.rm = T) #Promedio Ozone
+
+
+mean(df_quiz_1[df_quiz_1$Ozone > 31 & df_quiz_1$Temp > 90  , "Solar.R" ], na.rm = T) #Promedio del Subset de Solar.R
+
+
+mean(df_quiz_1[df_quiz_1$Month == 6, "Temp"], na.rm = T) #Promedio de Temp del subset Month = 6
+
+max(df_quiz_1[df_quiz_1$Month == 5, "Ozone"], na.rm = T)
+
+```
+
